@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingVertical="12dp">
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Web Name"
+            android:maxLength="35"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#FF333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_url"
+            android:layout_width="244dp"
+            android:layout_height="16dp"
+            android:maxLength="35"
+            android:text=""
+            android:textColor="#FF999999"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_delete"
+        android:layout_width="21dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:src="@mipmap/icon_delete" />
+</LinearLayout>

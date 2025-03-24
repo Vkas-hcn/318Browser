@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="showNoHistoryData"
+            type="Boolean"
+            android:value="false" />
+
+        <variable
+            name="showPage"
+            type="Integer"
+            android:value="1" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:visibility="@{showPage ==2 ?View.VISIBLE:View.GONE}"
+        app:layout_constraintBottom_toTopOf="@+id/main_menu"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/roverclat"
+            android:text="History"
+            android:textColor="#FF010101"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_his_s"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_search"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_history">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:src="@mipmap/icon_search"
+                app:layout_constraintBottom_toBottomOf="@+id/ll_web_s"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ll_web_s"
+                app:layout_constraintTop_toTopOf="@+id/ll_web_s" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_web_mark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:background="@null" />
+
+
+
+        </LinearLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_his_s">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="@{showNoHistoryData?View.GONE:View.VISIBLE}"
+                tools:listitem="@layout/lay_web_item" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/righteous"
+                android:text="No History"
+                android:textColor="#FF000000"
+                android:textSize="20sp"
+                android:visibility="@{showNoHistoryData?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

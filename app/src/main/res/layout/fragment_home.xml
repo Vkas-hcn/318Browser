@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+
+        <variable
+            name="showAdLoading"
+            type="Boolean"
+            android:value="false" />
+
+        <variable
+            name="showMenu"
+            type="Boolean"
+            android:value="false" />
+
+        <variable
+            name="showNoMarkData"
+            type="Boolean"
+            android:value="false" />
+
+        <variable
+            name="showNoHistoryData"
+            type="Boolean"
+            android:value="false" />
+
+        <variable
+            name="showPage"
+            type="Integer"
+            android:value="1" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_s">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="@{showPage ==1 ?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toTopOf="@+id/main_menu"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_s"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/icon_ser"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/righteous"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFFFF"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_s" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search for anything you want to know"
+                android:textColor="#FFB3B6FD"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_g_s_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_search"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_2">
+
+                <ImageView
+                    android:id="@+id/img_search_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_ser_edit" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Search..."
+                    android:textColorHint="#80FFFFFF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="21dp"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_g_s_home">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/atv_ins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/ic_instagram"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/righteous"
+                        android:gravity="center"
+                        android:text="Instagram"
+                        android:textColor="#FFA5A5A5"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/atv_vimor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/ic_vimor"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/righteous"
+                        android:gravity="center"
+                        android:text="Vimor"
+                        android:textColor="#FFA5A5A5"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/atv_titok"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/ic_tiktok"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/righteous"
+                        android:gravity="center"
+                        android:text="Tiktok"
+                        android:textColor="#FFA5A5A5"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/atv_fb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/ic_facebook"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/righteous"
+                        android:gravity="center"
+                        android:text="Facebook"
+                        android:textColor="#FFA5A5A5"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/atv_ytb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/ic_youtube"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/righteous"
+                        android:gravity="center"
+                        android:text="YouTube"
+                        android:textColor="#FFA5A5A5"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/atv_mass"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/ic_messenger"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/righteous"
+                        android:gravity="center"
+                        android:text="Netfilx"
+                        android:textColor="#FFA5A5A5"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/atv_what"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/ic_whatsapp"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/righteous"
+                        android:gravity="center"
+                        android:text="Whatsapp"
+                        android:textColor="#FFA5A5A5"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/atv_dis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/ic_discord"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/righteous"
+                        android:gravity="center"
+                        android:text="Discord"
+                        android:textColor="#FFA5A5A5"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:visibility="@{showPage ==0 ?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toTopOf="@+id/main_menu"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/pb_load"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:progressDrawable="@drawable/bg_pro_load"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_sear_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:src="@mipmap/ic_back_re"
+                app:layout_constraintBottom_toBottomOf="@+id/ll_web_s"
+                app:layout_constraintEnd_toStartOf="@+id/ll_web_s"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ll_web_s" />
+
+            <LinearLayout
+                android:id="@+id/ll_web_s"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_search"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_sear_logo"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_home_web"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+
+                <ImageView
+                    android:id="@+id/img_web_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/ic_rels"
+                    app:layout_constraintBottom_toBottomOf="@+id/ll_web_s"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ll_web_s"
+                    app:layout_constraintTop_toTopOf="@+id/ll_web_s" />
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/web_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_web_s" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <include
+            android:id="@+id/in_layout_his"
+            layout="@layout/layout_his"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:showNoHistoryData="@{showNoHistoryData}"
+            app:showPage="@{showPage}"
+            app:layout_constraintBottom_toTopOf="@+id/main_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="@{showPage==2 ?View.VISIBLE:View.GONE}" />
+        <include
+            android:id="@+id/in_layout_setting"
+            layout="@layout/layout_setting"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="@{showPage==4 ?View.VISIBLE:View.GONE}" />
+
+        <include
+            android:id="@+id/in_layout_tabs"
+            layout="@layout/layout_duo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="@{showPage==3 ?View.VISIBLE:View.GONE}" />
+        <View
+            android:id="@+id/view_mark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B3000000"
+            android:visibility="@{showMenu ?View.VISIBLE:View.GONE}" />
+
+        <LinearLayout
+            android:id="@+id/ll_dialog"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:background="@drawable/bg_menu"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp"
+            android:visibility="@{showMenu ?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toTopOf="@+id/main_menu"
+            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/tv_add_tba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="13dp"
+                android:fontFamily="@font/righteous"
+                android:text="Add tab"
+                android:textColor="#FF071232"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/tv_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="13dp"
+                android:fontFamily="@font/righteous"
+                android:text="Refresh"
+                android:textColor="#FF071232"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="13dp"
+                android:fontFamily="@font/righteous"
+                android:text="Share URL"
+                android:textColor="#FF071232"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_copy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="13dp"
+                android:fontFamily="@font/righteous"
+                android:text="Copy URL"
+                android:textColor="#FF071232"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aiv_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:src="@{showMenu?@drawable/conly_old_home_1:showPage ==1?@drawable/conly_old_home:@drawable/conly_old_home_1}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aiv_history"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:src="@{showMenu?@drawable/conly_old_wallet_1:showPage == 0 ?@drawable/icon_h:showPage ==2?@drawable/conly_old_wallet:@drawable/conly_old_wallet_1}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aiv_mark"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:src="@{showMenu?@drawable/ic_duo_1:showPage == 0 ?@drawable/icon_q:showPage ==3?@drawable/ic_duo:@drawable/ic_duo_1}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aiv_menu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:src="@{showMenu?@drawable/icon_more:showPage == 0 ?@drawable/icon_more:showPage ==4?@drawable/ic_user:@drawable/ic_user_1}" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

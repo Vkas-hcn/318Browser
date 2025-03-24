@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/startFragment">
+
+    <!-- Main Fragment -->
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.spring.breeze.proud.horse.fast.vjrwqp.sjokrb.StartFragment"
+        android:label="Start Fragment"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.spring.breeze.proud.horse.fast.vjrwqp.hie.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_ppFragment"
+            app:destination="@id/ppFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/ppFragment"
+        android:name="com.spring.breeze.proud.horse.fast.vjrwqp.pvkr.PpFragment"
+        android:label="PpFragment"
+        tools:layout="@layout/fragment_pp" >
+        <action
+            android:id="@+id/action_ppFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+</navigation>
