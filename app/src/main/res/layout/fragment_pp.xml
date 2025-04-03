@@ -28,7 +28,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_re"
+            android:src="@mipmap/ic_back_re"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
