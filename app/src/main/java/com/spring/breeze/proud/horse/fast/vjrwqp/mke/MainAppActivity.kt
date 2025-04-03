@@ -2,6 +2,7 @@ package com.spring.breeze.proud.horse.fast.vjrwqp.mke
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -12,7 +13,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.spring.breeze.proud.horse.fast.R
 import com.spring.breeze.proud.horse.fast.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(){
+class MainAppActivity : AppCompatActivity(){
 
     lateinit var navController: NavController
     lateinit var binding: ActivityMainBinding
@@ -40,6 +41,11 @@ class MainActivity : AppCompatActivity(){
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
+        onBackPressedDispatcher.addCallback {
+            finish()
+        }
     }
-
+    override fun onBackPressed() {
+        finishAffinity() // 结束当前 Activity 及其任务栈
+    }
 }

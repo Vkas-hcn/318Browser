@@ -2,18 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/startFragment">
+    app:startDestination="@id/homeFragment">
 
-    <!-- Main Fragment -->
-    <fragment
-        android:id="@+id/startFragment"
-        android:name="com.spring.breeze.proud.horse.fast.vjrwqp.sjokrb.StartFragment"
-        android:label="Start Fragment"
-        tools:layout="@layout/fragment_start">
-        <action
-            android:id="@+id/action_startFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
 
     <fragment
         android:id="@+id/homeFragment"

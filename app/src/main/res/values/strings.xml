@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Purple Mark Browser</string>
+    <string name="userName">Chrome</string>
+
 </resources>

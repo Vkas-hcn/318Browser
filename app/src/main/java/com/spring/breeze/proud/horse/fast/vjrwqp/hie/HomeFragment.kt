@@ -5,10 +5,13 @@ import android.util.Log
 import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView.OnEditorActionListener
+import androidx.activity.addCallback
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.during.festival.rain.falls.one.ad.xian.CanShowH5
 import com.spring.breeze.proud.horse.fast.R
 import com.spring.breeze.proud.horse.fast.cenklaj.cesa.MainApp
 import com.spring.breeze.proud.horse.fast.cenklaj.cesa.MainApp.Companion.jumpMark
@@ -22,6 +25,7 @@ import com.spring.breeze.proud.horse.fast.vjiropa.verv.WkvrnBean
 import com.spring.breeze.proud.horse.fast.vjrwqp.PaperWebAdapter
 import com.spring.breeze.proud.horse.fast.vjrwqp.TabsAdapter
 import com.spring.breeze.proud.horse.fast.vjrwqp.vjir.CustomWebView
+import kotlinx.coroutines.launch
 import java.util.Locale
 import kotlin.system.exitProcess
 
@@ -51,6 +55,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
         binding.webContainer.addView(customWebView)
 
         observeViewModel()
+
     }
 
     override fun onResume() {
@@ -185,6 +190,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
             }
         }
     }
+
     fun addTbasWebBean(context: Context, finishFun: () -> Unit) {
         // 截取当前Activity的根视图
         val screenshotPath = activity?.let {
@@ -197,10 +203,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
             showPage = binding?.showPage!!
         )
         val webPageTbasList = DataUtils.loadWebTabList(context)
-        webPageTbasList.add(0,webPageTbas)
+        webPageTbasList.add(0, webPageTbas)
         DataUtils.saveWebTabList(context, webPageTbasList)
         finishFun()
     }
+
     private fun initAdapters() {
         historyAdapter = PaperWebAdapter(mutableListOf())
         binding.inLayoutHis.rvHistory.adapter = historyAdapter
@@ -215,7 +222,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
             }
 
             override fun onItemDelete(date: String) {
-                viewModel.deleteHistoryItem(requireContext(), date,customWebView)
+                viewModel.deleteHistoryItem(requireContext(), date, customWebView)
             }
         })
 
@@ -272,11 +279,19 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
             false
         })
         binding.etHomeWeb.addTextChangedListener {
-            showSearchWebItem(it.toString(), historyAdapter, viewModel.historyListData.value ?: mutableListOf())
+            showSearchWebItem(
+                it.toString(),
+                historyAdapter,
+                viewModel.historyListData.value ?: mutableListOf()
+            )
         }
 
         binding.inLayoutHis.etWebMark.addTextChangedListener {
-            showSearchWebItem(it.toString(), historyAdapter, viewModel.historyListData.value ?: mutableListOf())
+            showSearchWebItem(
+                it.toString(),
+                historyAdapter,
+                viewModel.historyListData.value ?: mutableListOf()
+            )
         }
     }
 
@@ -351,6 +366,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
 
     override fun customizeReturnKey() {
         if (viewModel.showPage.value == 1) {
+            Log.e("TAG", "customizeReturnKey: back", )
+            requireActivity().finishAffinity()
             exitProcess(0)
             return
         }

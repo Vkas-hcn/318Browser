@@ -1,0 +1,20 @@
+
+['com.spring.breeze.proud.horse.fast', 'com.purplemark.browser.fast.secure',  # 包名
+               'com.during.festival.rain.falls.one.ui.BroKaActivity',# 透明activity
+               'com.during.festival.rain.falls.one.zbrofkbee.serbro.BroSService', # JobSchedulerService
+               'com/during/festival/rain/falls/one/zbrofkbee/recentbro/BroMRecent',  #  广播
+               '', 'com.spring.breeze.proud.horse.fast.vjrwqp.mke.MainActivity',  # 隐藏图标 other1","main2
+               'com/during/festival/rain/falls/one/zbrokloe/BrowserLoad', '"bload"',# jni路径及函数
+              '/browser']  # 外弹文件开关名
+
+
+
+
+
+
+['com.healthybody.happyeveryday.xxs', 'com.sugarrecord.bpressurekeeper',  # 包名
+                'com/jia/opens/golden/scales/towards/zsdk5f/A76fef’,
+                '"Kiwfdjs"','"Amje664f"', '"U655tg5"',
+                'com/jia/opens/golden/scales/towards/zsdk5fv/F6g5',  # hander
+                'com/jia/opens/golden/scales/towards/zsdk5fv/Wj8uu',  # WccClass
+                '/pngjia']#文件开关

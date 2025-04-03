@@ -11,6 +11,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.during.festival.rain.falls.one.utils.FragmentManager
 
 abstract class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel> : Fragment() {
 
@@ -45,6 +46,14 @@ abstract class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel> : Fragment
     abstract fun observeViewModel()
 
     abstract fun customizeReturnKey()
+    override fun onResume() {
+        super.onResume()
+        FragmentManager.addFragment(this)
+    }
+    override fun onPause() {
+        super.onPause()
+        FragmentManager.removeFragment(this)
+    }
 
     protected fun navigateTo(actionId: Int) {
         try {

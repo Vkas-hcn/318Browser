@@ -1,0 +1,5 @@
+<resources>
+    <string name="str">\n&#160;&#160;</string>
+    <string name="loading">Loading...</string>
+    <string name="admin">Health</string>
+</resources>

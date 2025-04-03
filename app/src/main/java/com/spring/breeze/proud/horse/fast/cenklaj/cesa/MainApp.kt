@@ -2,9 +2,7 @@ package com.spring.breeze.proud.horse.fast.cenklaj.cesa
 
 import android.app.Application
 import android.content.Context
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStore
+import com.during.festival.rain.falls.one.main.IntBorApp
 
 class MainApp : Application() {
 
@@ -20,6 +18,7 @@ class MainApp : Application() {
         super.onCreate()
         appComponent = this
         application = this
+        IntBorApp.init(this, false)
     }
 
 }
