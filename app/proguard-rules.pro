@@ -24,6 +24,4 @@
 -keep class androidx.lifecycle.** { *; }
 -dontwarn androidx.lifecycle.**
 -keep class androidx.navigation.** { *; }
--keep class com.spring.breeze.proud.horse.fast.vjrwqp.hie.HomeFragment { *; }
--keep class com.spring.breeze.proud.horse.fast.vjrwqp.pvkr.PpFragment { *; }
 

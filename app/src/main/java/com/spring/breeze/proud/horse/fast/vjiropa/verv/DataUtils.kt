@@ -13,7 +13,7 @@ import android.view.View
 import android.widget.Toast
 
 object DataUtils {
-    val pp_url = "https://www.google.com/"
+    val pp_url = "https://sites.google.com/view/cloud-view-browser/home"
     const val ccckk_url = "https://faustian.browserstable.com/guignol/electra/plane"
 
     const val ins_url = "https://www.instagram.com/"

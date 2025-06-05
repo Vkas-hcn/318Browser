@@ -61,7 +61,114 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab248bb0-7247-48f1-82da-c079034bb6de" name="Changes" comment="feat: fisrt" />
+    <list default="true" id="ab248bb0-7247-48f1-82da-c079034bb6de" name="Changes" comment="build: 更新 ProGuard 规则以保留特定类&#10;&#10;- 添加 androidx.navigation 包的保留规则，以防止导航组件被混淆&#10;- 添加 HomeFragment 和 PpFragment 类的保留规则，确保这些特定片段不被混淆">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/cenklaj/cesa/FragmentManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/filepath.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/libs/arm64-v8a/libpuplemar.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/libs/armeabi-v7a/libpuplemar.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/libs/x86/libpuplemar.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/libs/x86_64/libpuplemar.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ad/AdLimiter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ad/AdManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ad/AdScheduler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ad/AdUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ad/xian/AdFrequencyManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ad/xian/CanShowAd.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ad/xian/CanShowH5.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ad/xian/H5FrequencyManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/appbean/BrowserAllBean.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/appbean/OkSpBean.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/main/AdminPostUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/main/IntBorApp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/main/ResponseHandler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/main/StartService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ui/BroKaActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ui/BroKaViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ui/LabuActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ui/LabuContract.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/ui/LabuPresenter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/AllDataGet.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/AppPointData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/DataStoreDelegate.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/FragmentManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/PngCanGo.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/TtPoint.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/zbrofkbee/probro/HealthProv.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/zbrofkbee/recentbro/BroMRecent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/zbrofkbee/recentbro/BroSCReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/zbrofkbee/recentbro/BroWReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/zbrofkbee/serbro/BroFService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/zbrofkbee/serbro/BroSService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/zbrokloe/BrowserLoad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/drawable/ces_show.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/drawable/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/drawable/ic_xxx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/drawable/icon_bro.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/layout/activity_net.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/layout/activity_so_can.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/layout/layout_no.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/xml/healtha.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/436Browser/src/main/res/xml/healthcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/cenklaj/cesa/MainApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/cenklaj/cesa/MainApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/vjrwqp/hie/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/vjrwqp/hie/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/vjrwqp/mke/MainAppActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/vjrwqp/mke/MainAppActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/vjrwqp/mke/MainCanGoActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/vjrwqp/mke/MainCanGoActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +177,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=adf4dc11)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=ZY22BJ3JSV)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -126,7 +233,18 @@
       </list>
     </option>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/test.jks" />
+    <option name="KEY_ALIAS" value="test" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -137,7 +255,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Vkas-hcn/TheFourthBrowser.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/Vkas-hcn/318Browser.git&quot;,
     &quot;accountId&quot;: &quot;f2e10a46-51b0-4498-ab65-0f404904bf29&quot;
   }
 }</component>
@@ -158,39 +276,52 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Android App.app.executor": "Run",
+    "ApkExportedModule": "318Browser.app",
+    "BundleExportedModule": "318Browser.app",
     "DEBUGGABLE_DEVICE": "motorola-moto_g_5g_plus-ZY22BJ3JSV",
     "DEBUGGABLE_PROCESS": "com.phoenix.tail.butterfly.eats.concret.upside",
     "DEBUGGER_ID": "Auto",
+    "ExportApk.ApkPathFor318Browser.app": "/Users/vkas/Documents/tiwai/436/318Browser/app",
     "Gradle.Upgrade Gradle wrapper.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "SHOW_ALL_PROCESSES": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feat-509",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/vkas/Documents/tiwai/318Browser/app/src/main/res/mipmap-xxhdpi",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "last_opened_file_path": "/Users/vkas/Documents/tiwai/436/318Browser/app/src/main/java/com/spring/breeze/proud/horse/fast/cenklaj/cesa",
+    "settings.editor.selected.configurable": "preferences.language.Kotlin",
     "show.migrate.to.gradle.popup": "false"
+  },
+  "keyToStringList": {
+    "ExportApk.BuildVariants": [
+      "release"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/cenklaj/cesa" />
+      <recent name="$PROJECT_DIR$/436Browser/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/font" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.spring.breeze.proud.horse.fast.vjrwqp.mke" />
+      <recent name="com.during.festival.rain.falls.one.main" />
       <recent name="com.spring.breeze.proud.horse.fast.vjrwqp" />
       <recent name="com.spring.breeze.proud.horse.fast.vjiropa.verv" />
       <recent name="com.spring.breeze.proud.horse.fast.cenklaj.cesa" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.spring.breeze.proud.horse.fast.vjrwqp.mke" />
+      <recent name="com.during.festival.rain.falls.one.ad.xian" />
       <recent name="com.phoenix.tail.butterfly.eats.concret.upside.vvvvpp.aaarr" />
       <recent name="com.phoenix.tail.butterfly.eats.concret.upside.vvvvpp.mmmmbbbkk" />
       <recent name="com.phoenix.tail.butterfly.eats.concret.upside.vvvvpp.sssee" />
@@ -214,6 +345,7 @@
       <option name="MODE" value="default_activity" />
       <option name="RESTORE_ENABLED" value="false" />
       <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
@@ -266,6 +398,12 @@
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="318Browser.436Browser.unitTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -334,7 +472,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742804778843</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: img">
+      <option name="closed" value="true" />
+      <created>1742815909359</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742815909359</updated>
+    </task>
+    <task id="LOCAL-00009" summary="build: 更新 ProGuard 规则以保留特定类&#10;&#10;- 添加 androidx.navigation 包的保留规则，以防止导航组件被混淆&#10;- 添加 HomeFragment 和 PpFragment 类的保留规则，确保这些特定片段不被混淆">
+      <option name="closed" value="true" />
+      <created>1743672534367</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743672534367</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -348,7 +502,9 @@
     <MESSAGE value="fix: facebook id" />
     <MESSAGE value="fix: App name" />
     <MESSAGE value="feat: fisrt" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: fisrt" />
+    <MESSAGE value="feat: img" />
+    <MESSAGE value="build: 更新 ProGuard 规则以保留特定类&#10;&#10;- 添加 androidx.navigation 包的保留规则，以防止导航组件被混淆&#10;- 添加 HomeFragment 和 PpFragment 类的保留规则，确保这些特定片段不被混淆" />
+    <option name="LAST_COMMIT_MESSAGE" value="build: 更新 ProGuard 规则以保留特定类&#10;&#10;- 添加 androidx.navigation 包的保留规则，以防止导航组件被混淆&#10;- 添加 HomeFragment 和 PpFragment 类的保留规则，确保这些特定片段不被混淆" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -358,14 +514,55 @@
           <line>207</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/spring/breeze/proud/horse/fast/vjrwqp/hie/HomeFragment.kt</url>
-          <line>28</line>
-          <properties class="com.spring.breeze.proud.horse.fast.vjrwqp.hie.HomeFragment" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="11" />
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/main/ResponseHandler.kt</url>
+          <line>30</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/main/AdminPostUtils.kt</url>
+          <line>89</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/main/AdminPostUtils.kt</url>
+          <line>103</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/main/AdminPostUtils.kt</url>
+          <line>97</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/main/AdminPostUtils.kt</url>
+          <line>101</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/TtPoint.kt</url>
+          <line>260</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/TtPoint.kt</url>
+          <line>263</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/TtPoint.kt</url>
+          <line>143</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/436Browser/src/main/java/com/during/festival/rain/falls/one/utils/TtPoint.kt</url>
+          <line>147</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/build.gradle</url>
+          <line>38</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -373,6 +570,16 @@
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
+        <entry key="com.during.festival.rain.falls.one.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1748917066241" />
+          </value>
+        </entry>
+        <entry key="com.jia.opens.golden.scales.towards.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1743410565012" />
+          </value>
+        </entry>
         <entry key="com.phoenix.tail.butterfly.eats.concret">
           <value>
             <CheckInfo lastCheckTimestamp="1742783117055" />
@@ -395,12 +602,12 @@
         </entry>
         <entry key="com.spring.breeze.proud.horse.fast">
           <value>
-            <CheckInfo lastCheckTimestamp="1742795830551" />
+            <CheckInfo lastCheckTimestamp="1749112075342" />
           </value>
         </entry>
         <entry key="com.spring.breeze.proud.horse.fast.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1742795830550" />
+            <CheckInfo lastCheckTimestamp="1749112075357" />
           </value>
         </entry>
       </map>

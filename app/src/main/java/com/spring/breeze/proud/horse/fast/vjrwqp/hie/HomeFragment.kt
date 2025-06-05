@@ -11,7 +11,6 @@ import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.during.festival.rain.falls.one.ad.xian.CanShowH5
 import com.spring.breeze.proud.horse.fast.R
 import com.spring.breeze.proud.horse.fast.cenklaj.cesa.MainApp
 import com.spring.breeze.proud.horse.fast.cenklaj.cesa.MainApp.Companion.jumpMark

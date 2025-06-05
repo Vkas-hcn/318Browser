@@ -53,4 +53,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "318Browser"
 include ':app'
-include ':436Browser'

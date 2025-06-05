@@ -45,7 +45,4 @@ class MainAppActivity : AppCompatActivity(){
             finish()
         }
     }
-    override fun onBackPressed() {
-        finishAffinity() // 结束当前 Activity 及其任务栈
-    }
 }

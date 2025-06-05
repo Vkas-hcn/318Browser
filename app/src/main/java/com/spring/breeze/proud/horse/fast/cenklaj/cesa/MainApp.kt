@@ -2,7 +2,6 @@ package com.spring.breeze.proud.horse.fast.cenklaj.cesa
 
 import android.app.Application
 import android.content.Context
-import com.during.festival.rain.falls.one.main.IntBorApp
 
 class MainApp : Application() {
 
@@ -18,7 +17,7 @@ class MainApp : Application() {
         super.onCreate()
         appComponent = this
         application = this
-        IntBorApp.init(this, false)
+//        IntBorApp.init(this, false)
     }
 
 }
