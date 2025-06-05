@@ -19,8 +19,12 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
-
-
+-keep class com.google.gson.reflect.TypeToken { *; }
+-keep class * extends com.google.gson.reflect.TypeToken {
+    <fields>;
+    <methods>;
+}
+-keepattributes Signature
 -keep class androidx.lifecycle.** { *; }
 -dontwarn androidx.lifecycle.**
 -keep class androidx.navigation.** { *; }
