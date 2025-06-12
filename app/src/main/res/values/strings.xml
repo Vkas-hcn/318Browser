@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Cloud View Browser</string>
-    <string name="userName">Chrome</string>
-
+    <string name="str">\n&#160;&#160;</string>
+    <string name="str2">Access Point Manager</string>
 </resources>

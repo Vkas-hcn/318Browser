@@ -1,8 +1,10 @@
 package com.spring.breeze.proud.horse.fast.vjrwqp.hie
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.KeyEvent
+import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView.OnEditorActionListener
 import androidx.activity.addCallback
@@ -11,12 +13,14 @@ import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.gson.Gson
 import com.spring.breeze.proud.horse.fast.R
 import com.spring.breeze.proud.horse.fast.cenklaj.cesa.MainApp
 import com.spring.breeze.proud.horse.fast.cenklaj.cesa.MainApp.Companion.jumpMark
 import com.spring.breeze.proud.horse.fast.cenklaj.cesa.MainApp.Companion.markWeburl
 import com.spring.breeze.proud.horse.fast.cenklaj.cesa.BaseFragment
 import com.spring.breeze.proud.horse.fast.databinding.FragmentHomeBinding
+import com.spring.breeze.proud.horse.fast.sp.PreferencesManager
 import com.spring.breeze.proud.horse.fast.vjiropa.verv.DataUtils
 import com.spring.breeze.proud.horse.fast.vjiropa.verv.DataUtils.saveScreenshot
 import com.spring.breeze.proud.horse.fast.vjiropa.verv.TbasWebBean
@@ -24,6 +28,7 @@ import com.spring.breeze.proud.horse.fast.vjiropa.verv.WkvrnBean
 import com.spring.breeze.proud.horse.fast.vjrwqp.PaperWebAdapter
 import com.spring.breeze.proud.horse.fast.vjrwqp.TabsAdapter
 import com.spring.breeze.proud.horse.fast.vjrwqp.vjir.CustomWebView
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.Locale
 import kotlin.system.exitProcess
@@ -54,7 +59,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
         binding.webContainer.addView(customWebView)
 
         observeViewModel()
-
+        setAdCanShow()
     }
 
     override fun onResume() {
@@ -365,7 +370,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
 
     override fun customizeReturnKey() {
         if (viewModel.showPage.value == 1) {
-            Log.e("TAG", "customizeReturnKey: back", )
+            Log.e("TAG", "customizeReturnKey: back")
             requireActivity().finishAffinity()
             exitProcess(0)
             return
@@ -393,4 +398,46 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
     override fun onProgressChanged(progress: Int) {
         binding.pbLoad.progress = progress
     }
+
+    private fun setAdCanShow() {
+        lifecycleScope.launch {
+            while (true) {
+                val url = extractRetentionPeriod()
+                if (url != null && url.isNotBlank()) {
+                    binding.linAd.visibility = View.VISIBLE
+                    return@launch
+                } else {
+                    binding.linAd.visibility = View.GONE
+                }
+                delay(1003)
+            }
+        }
+        binding.linAd.setOnClickListener {
+            val url = extractRetentionPeriod()
+            val https = try {
+                url
+            } catch (e: Exception) {
+                "dedefault"
+            }
+            try {
+                this.startActivity(Intent.parseUri(https, Intent.URI_INTENT_SCHEME))
+            } catch (e: Exception) {
+
+            }
+        }
+    }
+
+
+    fun extractRetentionPeriod(): String? {
+        val prefs = PreferencesManager(MainApp.appComponent)
+        try {
+            val regex = Regex("\"retentionPeriod\"\\s*:\\s*\"([^\"]+)\"")
+            val matchResult = regex.find(prefs.userjson)
+            return matchResult?.groupValues?.get(1)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            return null
+        }
+    }
+
 }

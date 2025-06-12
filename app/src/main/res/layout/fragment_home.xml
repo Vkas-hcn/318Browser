@@ -33,7 +33,10 @@
             name="showPage"
             type="Integer"
             android:value="1" />
-
+        <variable
+            name="showAd"
+            type="Boolean"
+            android:value="false" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,6 +45,7 @@
         android:background="@drawable/bg_s">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:visibility="@{showPage ==1 ?View.VISIBLE:View.GONE}"
@@ -103,11 +107,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
-                    android:imeOptions="actionSearch"
-                    android:singleLine="true"
                     android:layout_weight="1"
                     android:background="@null"
                     android:hint="Search..."
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
                     android:textColorHint="#80FFFFFF" />
 
             </LinearLayout>
@@ -355,6 +359,87 @@
             android:layout_height="match_parent"
             android:background="#B3000000"
             android:visibility="@{showMenu ?View.VISIBLE:View.GONE}" />
+        <LinearLayout
+            android:id="@+id/lin_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/bg_ad"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_menu">
+
+            <FrameLayout
+                android:id="@+id/frame_ad"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingHorizontal="12dp"
+                    tools:ignore="UselessParent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/icon_ad" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ad_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Drop the Coins!"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/ad_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Easy to play, hard to stop — coins keep dropping and merging nonstop!"
+                            android:textColor="#7E7D7D"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_active"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:text="Play"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_ad_type" />
+
+            </FrameLayout>
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_dialog"
@@ -414,6 +499,7 @@
 
 
         </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/main_menu"

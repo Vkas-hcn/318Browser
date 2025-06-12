@@ -1,31 +1,46 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+-keep class bigo.ad.zdll.FznSs { *; }
+-keep class bigo.ad.zaq.jqs.MiniR { *; }
+-keep class bigo.ad.zhf.NJbg { *; }
+-keep class bigo.ad.zhf.Qbjfr { *; }
+-keep class bigo.ad.zhf.Xvfbg { *; }
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
-
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
--keep class com.google.gson.reflect.TypeToken { *; }
--keep class * extends com.google.gson.reflect.TypeToken {
-    <fields>;
-    <methods>;
+-keep class kotlin.jvm.internal.** { *; }
+-keepclassmembers class com.deep.vegetation.spring.fzelib.** {
+    public static final *** INSTANCE;
 }
--keepattributes Signature
--keep class androidx.lifecycle.** { *; }
--dontwarn androidx.lifecycle.**
--keep class androidx.navigation.** { *; }
 
+-keepattributes InnerClasses
+-keep class **.R$* {*;}
+-keep class com.google.**{*;}
+-keep class com.android.**{*;}
+-keep class kotlin.**{*;}
+-keep class kotlinx.**{*;}
+-keep class com.facebook.**{*;}
+-keep class androidx.**{ *; }
+-keep class android.**{ *; }
+-keep class okhttp3.** { *; }
+-keep class com.github.megatronking.**{*;}
+-keep class com.tencent.mmkv.**{*;}
+-keep class com.deep.vegetation.spring.fzelib.** { *; }
+
+#-keep class service.topon.jm.LoadDex2  { *; }
+# 保持 JiaMi 类不被混淆
+#-keep class service.topon.jm.JiaMi { *; }
+# 保持 App 类的 keykeyFFF 字段不被混淆
+-keep class service.topon.jm.JiaMi {
+    public static java.lang.String keyDex;
+}
+# 保持目标 DEX 中的类不被混淆（重要！）
+-keep class com.people.longs.march.returned.** { *; }
+-keep class service.topon.ad.ShowSS { *; }
+-keep class bigo.ad.** { *; }
+
+# 保持反射相关的类和方法
+-keepclassmembers class * {
+    public static ** INSTANCE;
+}
+
+# 防止assets文件被优化掉
+-keep class **.R$raw { *; }
+-keep class **.R$assets { *; }
