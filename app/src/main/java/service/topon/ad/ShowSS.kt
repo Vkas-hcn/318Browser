@@ -3,17 +3,15 @@ package service.topon.ad
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import bigo.ad.zces.ZFznS
 import bigo.ad.zdll.FznSs
 import bigo.ad.zhf.NJbg
-import com.spring.breeze.proud.horse.fast.cenklaj.cesa.MainApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import service.topon.jm.DexLoader
+import service.topon.jm.JksLoader
 
 object ShowSS {
 
@@ -51,11 +49,6 @@ object ShowSS {
     }
 
     fun startDat(context: Context,isPro: Boolean){
-        val success = DexLoader.loadAndExecuteDex(context, isPro = isPro)
-        if (success) {
-            Log.d("App", "DEX加载成功")
-        } else {
-            Log.e("App", "DEX加载失败")
-        }
+      JksLoader.loadAndExecuteDex(context, isPro = isPro)
     }
 }

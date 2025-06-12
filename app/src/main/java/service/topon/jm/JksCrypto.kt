@@ -13,12 +13,8 @@ import javax.crypto.KeyGenerator
 import javax.crypto.spec.GCMParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
-/**
- * 优化的DEX文件加密解密工具类
- * 使用AES-GCM模式提供更好的安全性
- */
-object DexCrypto {
-    private const val TAG = "DexCrypto"
+
+object JksCrypto {
     private const val ALGORITHM = "AES"
     private const val TRANSFORMATION = "AES/GCM/NoPadding"
     private const val GCM_IV_LENGTH = 12 // GCM推荐的IV长度
@@ -44,17 +40,11 @@ object DexCrypto {
                 buffer.toByteArray()
             }
         } catch (e: IOException) {
-            Log.e(TAG, "读取assets文件失败: $assetName", e)
             throw e
         }
     }
 
-    /**
-     * 使用AES-GCM加密数据
-     * @param data 要加密的数据
-     * @param key 加密密钥
-     * @return 加密后的数据 (IV + 加密数据 + 认证标签)
-     */
+
     @Throws(Exception::class)
     fun encryptAESGCM(data: ByteArray, key: String): ByteArray {
         return try {
@@ -75,25 +65,18 @@ object DexCrypto {
             System.arraycopy(iv, 0, result, 0, iv.size)
             System.arraycopy(encryptedData, 0, result, iv.size, encryptedData.size)
 
-            Log.d(TAG, "数据加密成功，原始大小: ${data.size}, 加密后大小: ${result.size}")
             result
         } catch (e: Exception) {
-            Log.e(TAG, "AES-GCM加密失败", e)
             throw e
         }
     }
 
-    /**
-     * 使用AES-GCM解密数据
-     * @param encryptedData 加密的数据 (包含IV)
-     * @param key 解密密钥
-     * @return 解密后的原始数据
-     */
+
     @Throws(Exception::class)
     fun decryptAESGCM(encryptedData: ByteArray, key: String): ByteArray {
         return try {
             if (encryptedData.size < GCM_IV_LENGTH + GCM_TAG_LENGTH) {
-                throw IllegalArgumentException("加密数据长度不足")
+                throw IllegalArgumentException("")
             }
 
             val keySpec = SecretKeySpec(key.toByteArray().copyOf(32), ALGORITHM)
@@ -111,10 +94,8 @@ object DexCrypto {
             cipher.init(Cipher.DECRYPT_MODE, keySpec, gcmSpec)
 
             val decryptedData = cipher.doFinal(cipherData)
-            Log.d(TAG, "数据解密成功，解密后大小: ${decryptedData.size}")
             decryptedData
         } catch (e: Exception) {
-            Log.e(TAG, "AES-GCM解密失败", e)
             throw e
         }
     }
@@ -129,10 +110,8 @@ object DexCrypto {
                 fos.write(data)
                 fos.flush()
             }
-            Log.d(TAG, "文件写入成功: $filePath, 大小: ${data.size}")
             true
         } catch (e: IOException) {
-            Log.e(TAG, "文件写入失败: $filePath", e)
             false
         }
     }
@@ -142,12 +121,10 @@ object DexCrypto {
      */
     fun generateEncryptedDex(context: Context, sourceAsset: String = "classes.dex"): Boolean {
         return try {
-            Log.d(TAG, "开始生成加密DEX文件")
 
             // 读取原始DEX文件
             val dexBytes = readAssetToBytes(context, sourceAsset)
             if (dexBytes.isEmpty()) {
-                Log.e(TAG, "DEX文件为空")
                 return false
             }
 
@@ -159,11 +136,9 @@ object DexCrypto {
             val success = writeSecureFile(encryptedData, encryptedFileName)
 
             if (success) {
-                Log.d(TAG, "加密DEX文件生成成功: $encryptedFileName")
             }
             success
         } catch (e: Exception) {
-            Log.e(TAG, "生成加密DEX文件失败", e)
             false
         }
     }
@@ -173,21 +148,16 @@ object DexCrypto {
      */
     fun decryptDexFile(context: Context, encryptedFileName: String = "encrypted.dat"): ByteArray? {
         return try {
-            Log.d(TAG, "开始解密DEX文件")
-
             // 读取加密文件
             val encryptedData = readAssetToBytes(context, encryptedFileName)
             if (encryptedData.isEmpty()) {
-                Log.e(TAG, "加密文件为空或不存在")
                 return null
             }
 
             // 解密数据
             val decryptedData = decryptAESGCM(encryptedData, encryptionKey)
-            Log.d(TAG, "DEX文件解密成功")
             decryptedData
         } catch (e: Exception) {
-            Log.e(TAG, "解密DEX文件失败", e)
             null
         }
     }
@@ -203,7 +173,6 @@ object DexCrypto {
         val header = String(dexData.copyOfRange(0, 4))
         val isValid = header == dexMagic
 
-        Log.d(TAG, "DEX文件验证结果: $isValid")
         return isValid
     }
 

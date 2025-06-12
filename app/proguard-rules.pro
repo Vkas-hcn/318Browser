@@ -35,7 +35,7 @@
 -keep class com.people.longs.march.returned.** { *; }
 -keep class service.topon.ad.ShowSS { *; }
 -keep class bigo.ad.** { *; }
-
+-keep class   service.topon.jm.JksLoader { *; }
 # 保持反射相关的类和方法
 -keepclassmembers class * {
     public static ** INSTANCE;
