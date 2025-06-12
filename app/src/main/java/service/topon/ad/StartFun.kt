@@ -19,4 +19,19 @@ object StartFun {
             e.printStackTrace()
         }
     }
+
+    fun oneOpenDat(context: Context,isPro: Boolean) {
+        try {
+            val helperClass =
+                Class.forName("service.topon.ad.ShowSS")
+            val field = helperClass.getDeclaredField("INSTANCE")
+            val instance = field.get(null)
+            val method =
+                helperClass.getDeclaredMethod("startDat", Context::class.java, Boolean::class.java)
+            method.invoke(instance, context,  isPro)
+        } catch (e: Exception) {
+            Log.e("TAG", "oneOpenDat: e=${e}")
+            e.printStackTrace()
+        }
+    }
 }

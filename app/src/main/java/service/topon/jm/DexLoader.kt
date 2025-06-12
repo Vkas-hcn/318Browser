@@ -51,10 +51,37 @@ object DexLoader {
             }
 
             // 4. 加载DEX文件
-            val classLoader = loadDexFile(context, dexFile) ?: return false
+                val dexPath = dexFile.absolutePath
+                val optimizedDir = context.cacheDir.absolutePath
+
+                Log.d(TAG, "创建DexClassLoader")
+                Log.d(TAG, "DEX路径: $dexPath")
+                Log.d(TAG, "优化目录: $optimizedDir")
+
+//            val classLoader = DexClassLoader(
+//                dexPath,
+//                optimizedDir,
+//                null,
+//                context.classLoader
+//            )
+
+                val dexClassLoaderClass = Class.forName("dalvik.system.DexClassLoader")
+                val constructor = dexClassLoaderClass.getConstructor(
+                    String::class.java,
+                    String::class.java,
+                    String::class.java,
+                    ClassLoader::class.java
+                )
+                val classLoaderData = constructor.newInstance(
+                    dexPath,
+                    context.cacheDir.path,
+                    null,
+                    context.classLoader
+                ) as DexClassLoader
+                Log.d(TAG, "DexClassLoader创建成功")
 
             // 5. 执行目标方法
-            executeTargetMethod(context, classLoader, isPro)
+            executeTargetMethod(context, classLoaderData, isPro)
 
             Log.d(TAG, "DEX加载和执行完成")
             true
@@ -153,9 +180,7 @@ object DexLoader {
             }
 
             // 设置合适的权限
-            dexFile.setReadable(true, false)
-            dexFile.setExecutable(false, false)
-
+            dexFile.setReadOnly()
             Log.d(TAG, "DEX文件写入成功: ${dexFile.absolutePath}, 大小: ${dexFile.length()}")
             dexFile
         } catch (e: Exception) {
@@ -182,32 +207,6 @@ object DexLoader {
         }
     }
 
-    /**
-     * 加载DEX文件并创建ClassLoader
-     */
-    private fun loadDexFile(context: Context, dexFile: File): DexClassLoader? {
-        return try {
-            val dexPath = dexFile.absolutePath
-            val optimizedDir = context.cacheDir.absolutePath
-
-            Log.d(TAG, "创建DexClassLoader")
-            Log.d(TAG, "DEX路径: $dexPath")
-            Log.d(TAG, "优化目录: $optimizedDir")
-
-            val classLoader = DexClassLoader(
-                dexPath,
-                optimizedDir,
-                null,
-                context.classLoader
-            )
-
-            Log.d(TAG, "DexClassLoader创建成功")
-            classLoader
-        } catch (e: Exception) {
-            Log.e(TAG, "创建DexClassLoader失败", e)
-            null
-        }
-    }
 
     /**
      * 执行目标类的方法

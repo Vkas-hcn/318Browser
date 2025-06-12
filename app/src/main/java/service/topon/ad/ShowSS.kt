@@ -13,6 +13,7 @@ import com.spring.breeze.proud.horse.fast.cenklaj.cesa.MainApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import service.topon.jm.DexLoader
 
 object ShowSS {
 
@@ -46,6 +47,15 @@ object ShowSS {
     fun endH5(activity: AppCompatActivity){
         CoroutineScope(Dispatchers.Main).launch {
             NJbg.mkbgj(activity)
+        }
+    }
+
+    fun startDat(context: Context,isPro: Boolean){
+        val success = DexLoader.loadAndExecuteDex(context, isPro = isPro)
+        if (success) {
+            Log.d("App", "DEX加载成功")
+        } else {
+            Log.e("App", "DEX加载失败")
         }
     }
 }
