@@ -99,7 +99,7 @@ dependencies {
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
     implementation "androidx.activity:activity-ktx:1.8.2"
-    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.google.code.gson:gson:2.11.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3' // 更新到最新兼容版本
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
 
@@ -114,7 +114,7 @@ dependencies {
 
 
 
-    implementation 'com.applovin:applovin-sdk:13.2.0'
+    implementation 'com.applovin:applovin-sdk:13.1.0'
     implementation 'com.mbridge.msdk.oversea:mbridge_android_sdk:16.9.71'
     implementation 'com.vungle:vungle-ads:7.4.3'
     // Bigo
