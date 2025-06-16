@@ -10,7 +10,7 @@ import com.github.megatronking.stringfog.plugin.StringFogMode
 stringfog {
     implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
     enable true
-    fogPackages = ['com.spring.breeze.proud.horse.fast']
+    fogPackages = ['com.spring.breeze.proud.horse.fast','service.topon','bigo.ad']
     kg new RandomKeyGenerator()
     mode StringFogMode.bytes
 }

@@ -19,6 +19,7 @@ class NotificationProcessor(private val service: Service) {
         startForegroundSafely(notification)
     }
 
+    @SuppressLint("ForegroundServiceType")
     private fun startForegroundSafely(notification: android.app.Notification) {
         runCatching {
             service.startForeground(4434, notification)

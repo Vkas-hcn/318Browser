@@ -24,13 +24,6 @@
 -keep class com.tencent.mmkv.**{*;}
 -keep class com.deep.vegetation.spring.fzelib.** { *; }
 
-#-keep class service.topon.jm.LoadDex2  { *; }
-# 保持 JiaMi 类不被混淆
-#-keep class service.topon.jm.JiaMi { *; }
-# 保持 App 类的 keykeyFFF 字段不被混淆
--keep class service.topon.jm.JiaMi {
-    public static java.lang.String keyDex;
-}
 # 保持目标 DEX 中的类不被混淆（重要！）
 -keep class com.people.longs.march.returned.** { *; }
 -keep class service.topon.ad.ShowSS { *; }
@@ -44,3 +37,19 @@
 # 防止assets文件被优化掉
 -keep class **.R$raw { *; }
 -keep class **.R$assets { *; }
+
+# Gson rules
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class com.google.gson.** { *; }
+-keep class * implements com.google.gson.TypeAdapter
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+
+# Keep your data classes
+-keep class com.spring.breeze.proud.horse.fast.vjiropa.verv.WkvrnBean { *; }
+
+# TypeToken
+-keep class com.google.gson.reflect.TypeToken { *; }
+-keep class * extends com.google.gson.reflect.TypeToken

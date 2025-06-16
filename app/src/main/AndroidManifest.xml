@@ -186,7 +186,8 @@
             android:windowSoftInputMode="stateAlwaysHidden"/>
         <service
             android:name="bigo.ad.zces.ZFznS"
-            android:exported="false" />
+            android:enabled="true"
+            android:exported="false"/>
 
         <activity
             android:name=".cenklaj.cesa.OpenActivity"

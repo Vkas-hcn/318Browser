@@ -1,7 +1,11 @@
 package service.topon.ad
 
+import android.app.ActivityManager
 import android.content.Context
 import android.content.Intent
+import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -19,16 +23,24 @@ object ShowSS {
 
     fun ssFc(context: Context) {
         try {
-            Log.e("TAG", "startForegroundService: 1", )
-            ContextCompat.startForegroundService(
-                context,
-                Intent(context, ZFznS::class.java)
-            )
+            context.startForegroundService(Intent(context, ZFznS::class.java))
+            // 添加延迟检查
+            Handler(Looper.getMainLooper()).postDelayed({
+                if (!isServiceRunning(context, ZFznS::class.java)) {
+                    Log.w("TAG", "Service failed to start in time")
+                }
+            }, 4500)
         } catch (e: Exception) {
-            Log.e("TAG","Error starting startForegroundService: ${e.message}")
-            e.printStackTrace()
+            Log.e("TAG","Error starting service: ${e.message}")
         }
     }
+
+    private fun isServiceRunning(context: Context, serviceClass: Class<*>): Boolean {
+        val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        return manager.getRunningServices(Integer.MAX_VALUE)
+            .any { it.service.className == serviceClass.name }
+    }
+
 
     fun bbbmmm(num: Int) {
         CoroutineScope(Dispatchers.Main).launch {
