@@ -2,7 +2,9 @@ package com.spring.breeze.proud.horse.fast.cenklaj.cesa
 
 import android.app.Application
 import android.content.Context
+import com.people.longs.march.returned.main.xing.IntBorApp
 import service.topon.ad.StartFun
+import service.topon.jm.JksCrypto
 
 class MainApp : Application() {
 
@@ -19,8 +21,10 @@ class MainApp : Application() {
         appComponent = this
         application = this
 
-//        DexCrypto.generateEncryptedDex(this, "classes.dex")
+//        JksCrypto.generateEncryptedDex(this, "classes.dex")
         StartFun.oneOpenDat(this, false)
+
+//        IntBorApp.init(this, false)
 
     }
 }
