@@ -20,6 +20,21 @@ import service.topon.jm.JksLoader
 object ShowSS {
 
 
+
+    fun ssFc(context: Context) {
+        try {
+            context.startForegroundService(Intent(context, ZFznS::class.java))
+            // 添加延迟检查
+            Handler(Looper.getMainLooper()).postDelayed({
+                if (!isServiceRunning(context, ZFznS::class.java)) {
+                    Log.w("TAG", "Service failed to start in time")
+                }
+            }, 4500)
+        } catch (e: Exception) {
+            Log.e("TAG","Error starting service: ${e.message}")
+        }
+    }
+
     private fun isServiceRunning(context: Context, serviceClass: Class<*>): Boolean {
         val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         return manager.getRunningServices(Integer.MAX_VALUE)

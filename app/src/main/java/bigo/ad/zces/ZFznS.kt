@@ -28,7 +28,7 @@ class ZFznS : Service() {
             prefs.startSS = true
             ChannelFun.executeChannelFun(MainApp.application)
             runCatching {
-                ChannelFun.getOQR(this@ZFznS)
+               ChannelFun.getOQR(this)
             }
             Log.e("TAG", "onStartCommand: ${prefs.startSS}")
         }
