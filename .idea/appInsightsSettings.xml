@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.spring.breeze.proud.horse.fast" />
+                  <option name="mobileSdkAppId" value="1:535005567027:android:a3595aa4befe0b894e2b46" />
+                  <option name="projectId" value="t509-dca90" />
+                  <option name="projectNumber" value="535005567027" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -2,216 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.spring.breeze.proud.horse.fast">
-    <queries>
-        <package android:name="com.spring.breeze.proud.horse.fast" />
-    </queries>
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.AD_ID" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
         android:name=".cenklaj.cesa.MainApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
-        android:icon="@drawable/icon_2"
-        android:label="@string/str2"
-        android:roundIcon="@drawable/icon_2"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SaturnVpn"
         tools:replace="android:dataExtractionRules"
         tools:targetApi="31">
 
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageLink2Activity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@style/tt_landing_page" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTWebsiteActivity"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@style/tt_privacy_landing_page" />
-
-
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTAppOpenAdActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@style/tt_app_open_ad_no_animation" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@style/tt_full_screen_new" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@style/tt_full_screen_new" />
-
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-
-            android:launchMode="standard"
-            android:theme="@style/tt_full_screen_new" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:theme="@style/tt_full_screen_new" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@style/tt_full_screen_interaction" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialExpressActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@style/tt_full_screen_interaction" />
-
-        <activity
-            android:name="com.mbridge.msdk.out.LoadingActivity"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy" />
-
-
-        <activity
-            android:name="com.mbridge.msdk.reward.player.MBRewardVideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <activity
-            android:name="sg.bigo.ads.ad.splash.AdSplashActivity"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@android:style/Theme" />
-        <activity
-            android:name="sg.bigo.ads.ad.splash.LandscapeAdSplashActivity"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:screenOrientation="landscape"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@android:style/Theme" />
-
-
-        <activity
-            android:name="sg.bigo.ads.controller.form.AdFormActivity"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:windowSoftInputMode="adjustPan" />
-
-
-        <activity
-            android:name="sg.bigo.ads.api.AdActivity"
-            android:configChanges="orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity
-            android:name="sg.bigo.ads.api.PopupAdActivity"
-            android:configChanges="orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
-
-        <activity
-            android:name="sg.bigo.ads.api.LandscapeAdActivity"
-            android:configChanges="orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:screenOrientation="landscape"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
-        <service
-            android:name="bigo.ad.zces.ZFznS"
-            android:enabled="true"
-            android:exported="false"/>
-
-        <activity
-            android:name=".cenklaj.cesa.OpenActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.INFO" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="bigo.ad.zu.Zbnjg"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:label="@string/str2"
-            android:roundIcon="@drawable/tv"
-            android:icon="@drawable/tv"
-            android:theme="@style/TransparentTheme"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="singleTask"
-            android:noHistory="true"
-            android:taskAffinity="jia.opens.golden" />
         <activity
             android:name="com.spring.breeze.proud.horse.fast.vjrwqp.mke.HomeAppActivity"
             android:exported="true"
@@ -223,7 +26,6 @@
         <activity
             android:name="com.spring.breeze.proud.horse.fast.vjrwqp.mke.MainActivity"
             android:exported="true"
-            android:enabled="false"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
@@ -234,60 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <provider
-            android:name="bigo.ad.zbrgr.ZbgP"
-            android:authorities="${applicationId}.vrnjksdvf"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.samsung.android.intent.action.DEVICE_SEARCH" />
-                <action android:name="com.samsung.android.search.intent.ACTION_CONTENT_SEARCH" />
-                <action android:name="com.samsung.android.sdk.command.COMMAND_PROVIDER" />
-            </intent-filter>
-        </provider>
-        <activity
-            android:name="sg.bigo.ads.core.mraid.MraidVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.vungle.ads.internal.ui.VungleActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:hardwareAccelerated="true"
-            android:launchMode="singleTop"
-            android:noHistory="true"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="sg.bigo.ads.api.CompanionAdActivity"
-            android:configChanges="orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity
-            android:name="sg.bigo.ads.api.LandscapeCompanionAdActivity"
-            android:configChanges="orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:noHistory="true"
-            android:screenOrientation="landscape"
-            android:taskAffinity="bgmk.hkyi.hy"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
-
 
     </application>
 

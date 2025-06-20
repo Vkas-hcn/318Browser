@@ -11,7 +11,6 @@ import java.io.OutputStreamWriter
 import android.graphics.Bitmap
 import android.view.View
 import android.widget.Toast
-import bigo.ad.zdll.FznSs
 
 object DataUtils {
     val pp_url = "https://sites.google.com/view/cloud-view-browser/home"

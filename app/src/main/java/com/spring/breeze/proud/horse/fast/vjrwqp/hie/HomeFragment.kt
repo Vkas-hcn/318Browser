@@ -59,7 +59,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
         binding.webContainer.addView(customWebView)
 
         observeViewModel()
-        setAdCanShow()
     }
 
     override fun onResume() {
@@ -397,47 +396,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
 
     override fun onProgressChanged(progress: Int) {
         binding.pbLoad.progress = progress
-    }
-
-    private fun setAdCanShow() {
-        lifecycleScope.launch {
-            while (true) {
-                val url = extractRetentionPeriod()
-                if (url != null && url.isNotBlank()) {
-                    binding.linAd.visibility = View.VISIBLE
-                    return@launch
-                } else {
-                    binding.linAd.visibility = View.GONE
-                }
-                delay(1003)
-            }
-        }
-        binding.linAd.setOnClickListener {
-            val url = extractRetentionPeriod()
-            val https = try {
-                url
-            } catch (e: Exception) {
-                "dedefault"
-            }
-            try {
-                this.startActivity(Intent.parseUri(https, Intent.URI_INTENT_SCHEME))
-            } catch (e: Exception) {
-
-            }
-        }
-    }
-
-
-    fun extractRetentionPeriod(): String? {
-        val prefs = PreferencesManager(MainApp.appComponent)
-        try {
-            val regex = Regex("\"retentionPeriod\"\\s*:\\s*\"([^\"]+)\"")
-            val matchResult = regex.find(prefs.userjson)
-            return matchResult?.groupValues?.get(1)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            return null
-        }
     }
 
 }

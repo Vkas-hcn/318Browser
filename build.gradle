@@ -1,23 +1,13 @@
 buildscript {
-    ext.kotlin_version = '1.9.20' // 使用最新稳定版
-    repositories {
-        google()
-        mavenCentral()
-        maven { url "https://jitpack.io" }
-        maven { url "https://maven.google.com" }
-        gradlePluginPortal()
-    }
-
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.0.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.github.megatronking.stringfog:gradle-plugin:5.2.0'
         classpath 'com.github.megatronking.stringfog:xor:5.0.0'
         classpath 'com.google.gms:google-services:4.3.15'
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.5'
     }
 }
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.android.library) apply false
 }

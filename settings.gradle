@@ -9,17 +9,15 @@ pluginManagement {
         flatDir {
             dirs 'libs'
         }
-        //Anythink(Core)
+        // TradPlus
+        mavenCentral()
+        // Pangle
         maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
+            url 'https://artifact.bytedance.com/repository/pangle'
         }
-
-        //Pangle
-        maven {
-            url "https://artifact.bytedance.com/repository/pangle"
-        }
-
-        //Mintegral
+        // Mintegral
+        //Launch GP market application， Android X Version
+        //If you fail to pull the code using gradle, add the maven warehouse configuration to the project root build.gradle file
         maven {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
         }
@@ -34,17 +32,15 @@ dependencyResolutionManagement {
         flatDir {
             dirs 'libs'
         }
-        //Anythink(Core)
+        // TradPlus
+        mavenCentral()
+        // Pangle
         maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
+            url 'https://artifact.bytedance.com/repository/pangle'
         }
-
-        //Pangle
-        maven {
-            url "https://artifact.bytedance.com/repository/pangle"
-        }
-
-        //Mintegral
+        // Mintegral
+        //Launch GP market application， Android X Version
+        //If you fail to pull the code using gradle, add the maven warehouse configuration to the project root build.gradle file
         maven {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
         }
@@ -53,3 +49,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "318Browser"
 include ':app'
+include ':pple'
+//include ':436Browser'
+
+

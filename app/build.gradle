@@ -2,15 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id 'stringfog'
-    id 'com.google.firebase.crashlytics'
-    id 'com.google.gms.google-services'
+//    id 'com.google.firebase.crashlytics'
+//    id 'com.google.gms.google-services'
 }
 import com.github.megatronking.stringfog.plugin.kg.RandomKeyGenerator
 import com.github.megatronking.stringfog.plugin.StringFogMode
 stringfog {
     implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
     enable true
-    fogPackages = ['com.spring.breeze.proud.horse.fast','service.topon','bigo.ad']
+    fogPackages = ['com.spring.breeze.proud.horse.fast']
     kg new RandomKeyGenerator()
     mode StringFogMode.bytes
 }
@@ -64,7 +64,6 @@ android {
 }
 
 dependencies {
-    implementation project(':pple')
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
 
@@ -111,16 +110,5 @@ dependencies {
     implementation "com.android.installreferrer:installreferrer:2.2"
 
 
-
-
-
-    implementation 'com.applovin:applovin-sdk:13.1.0'
-    implementation 'com.mbridge.msdk.oversea:mbridge_android_sdk:16.9.71'
-    implementation 'com.vungle:vungle-ads:7.4.3'
-    // Bigo
-    implementation 'com.bigossp:bigo-ads:5.3.0'
-    // Inmobi
-    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:10.8.2'
-    implementation 'com.fyber:marketplace-sdk:8.3.6'
 
 }
